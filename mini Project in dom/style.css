@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/* body{
+  
+    background-image: linear-gradient( rgb(66, 93, 229), rgb(146, 154, 226),  rgb(75, 75, 243));
+  
+} */
+#nav{
+ 
+    width:100%;
+    height:150vh;
+    /* background-image:url(https://wallpaperaccess.com/full/1524364.jpg); */
+    /* background-color: black; */
+    background-size: cover;
+
+}
+/* .navbar{
+
+  
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.333);
+  line-height: 50px;
+  
+} */
+.navbar-brand{
+    color: white;
+    text-shadow: 2px 1px 8px rgb(10, 10, 10);
+    font-size: 3rem;
+
+    margin-left: 22rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media (min-width: 200px) and (max-width: 768px)  {
+    .navbar-brand {
+      
+      font-size: 1.5rem;
+     margin-left: 1rem;
+    
+    }
+    .d-inline-block{
+       
+       margin-left: 0.5rem;
+
+    }
+    
+  }
+
+
+
+  .icon{
+    display: flex;
+    flex-direction: row;
+    
+  
+  }
+  #F:hover{
+    box-shadow: 1px 2px 3px 1px #3b5998 ;
+    border-radius: 4.5px;
+  }
+
+  #L:hover{
+    box-shadow: 1px 2px 3px 1px #3b5998 ;
+    border-radius: 4.5px;
+    
+  }
+
+  #T:hover{
+    box-shadow: 1px 2px 3px 1px #3b5998 ;
+    border-radius: 4.5px;
+  }
+
+  #button :hover{
+    box-shadow:1px 2px 3px 1px black;
+   
+  }
+
+
+
+
+
+
+
+
+
+  @import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+  
+  body {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(1, 1, 1);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  :root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: white;
+    --c2: rgba(202, 225, 230, 0.077);
+    
+  }
+  
+  .wrapper {
+    min-width: min(40rem, 100%);
+  }
+  
+  .box {
+    font-size: 1vw;
+    margin: max(1rem, 3vw);
+    border: 0.35rem solid;
+    
+    padding: 3vw;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+    animation: borderRotate var(--d) linear infinite forwards;
+  }
+  
+  .box:nth-child(2) {
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+    animation: borderRadial var(--d) linear infinite forwards;
+   
+  }
+  
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+  
+  @keyframes borderRadial {
+    20% {
+      --gradX: 100%;
+      --gradY: 50%;
+    }
+    40% {
+      --gradX: 100%;
+      --gradY: 100%;
+    }
+    60% {
+      --gradX: 50%;
+      --gradY: 100%;
+    }
+    80% {
+      --gradX: 0%;
+      --gradY: 50%;
+    }
+    100% {
+      --gradX: 50%;
+      --gradY: 0%;
+    }
+  }
